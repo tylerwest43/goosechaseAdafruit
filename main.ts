@@ -1,14 +1,3 @@
-input.onLoudSound(function () {
-    makerController.player1.setButton(ArcadeButton.A, true)
-    light.showRing(
-    `yellow yellow yellow yellow yellow yellow yellow yellow yellow yellow`
-    )
-    control.waitMicros(200)
-    makerController.player1.setButton(ArcadeButton.A, false)
-    light.showRing(
-    `black black black black black black black black black black`
-    )
-})
 input.onGesture(Gesture.Shake, function () {
     makerController.player1.setButton(ArcadeButton.B, true)
     for (let index = 0; index < 3; index++) {
@@ -41,6 +30,20 @@ forever(function () {
         `green green green green green black black black black black`
         )
         control.waitMicros(100)
+        light.showRing(
+        `black black black black black black black black black black`
+        )
+    }
+})
+forever(function () {
+    if (input.soundLevel() >= 10) {
+        makerController.player1.setButton(ArcadeButton.A, true)
+        light.showRing(
+        `yellow yellow yellow yellow yellow yellow yellow yellow yellow yellow`
+        )
+    } else {
+        control.waitMicros(10)
+        makerController.player1.setButton(ArcadeButton.A, false)
         light.showRing(
         `black black black black black black black black black black`
         )
