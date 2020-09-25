@@ -34,9 +34,7 @@ forever(function () {
         `black black black black black black black black black black`
         )
     }
-})
-forever(function () {
-    if (input.soundLevel() >= 10) {
+    if (input.soundLevel() >= 125) {
         makerController.player1.setButton(ArcadeButton.A, true)
         light.showRing(
         `yellow yellow yellow yellow yellow yellow yellow yellow yellow yellow`
