@@ -9,6 +9,8 @@ for (let index = 0; index < 3; index++) {
     control.waitMicros(5)
 }
 forever(function () {
+    makerController.player1.setButton(ArcadeButton.Down, input.buttonA.isPressed())
+    makerController.player1.setButton(ArcadeButton.Up, input.buttonB.isPressed())
     if (input.buttonB.isPressed()) {
         music.pewPew.play()
         light.showRing(
