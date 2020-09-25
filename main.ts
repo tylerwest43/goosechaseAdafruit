@@ -46,8 +46,3 @@ forever(function () {
         )
     }
 })
-forever(function () {
-    if (true) {
-    	
-    }
-})
