@@ -1,12 +1,15 @@
-for (let index = 0; index < 3; index++) {
+input.onLoudSound(function () {
+    makerController.player1.setButton(ArcadeButton.A, true)
     light.showRing(
-    `green green green green green green green green green green`
+    `yellow yellow yellow yellow yellow yellow yellow yellow yellow yellow`
     )
-    control.waitMicros(5)
+    control.waitMicros(100)
     light.showRing(
     `black black black black black black black black black black`
     )
-    control.waitMicros(5)
+})
+for (let index = 0; index < 3; index++) {
+	
 }
 forever(function () {
     makerController.player1.setButton(ArcadeButton.Down, input.buttonA.isPressed())
@@ -34,9 +37,6 @@ forever(function () {
 })
 forever(function () {
     if (true) {
-        music.wawawawaa.play()
-        light.showRing(
-        "red red red red red red red red red red"
-        )
+    	
     }
 })
