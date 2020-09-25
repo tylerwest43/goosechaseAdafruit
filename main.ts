@@ -9,9 +9,19 @@ input.onLoudSound(function () {
     `black black black black black black black black black black`
     )
 })
-for (let index = 0; index < 3; index++) {
-	
-}
+input.onGesture(Gesture.Shake, function () {
+    makerController.player1.setButton(ArcadeButton.B, true)
+    for (let index = 0; index < 3; index++) {
+        light.showRing(
+        `green green green green green green green green green green`
+        )
+        control.waitMicros(5)
+        light.showRing(
+        `black black black black black black black black black black`
+        )
+        control.waitMicros(5)
+    }
+})
 forever(function () {
     makerController.player1.setButton(ArcadeButton.Down, input.buttonA.isPressed())
     makerController.player1.setButton(ArcadeButton.Up, input.buttonB.isPressed())
