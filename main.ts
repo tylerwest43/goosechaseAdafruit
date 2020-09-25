@@ -3,7 +3,8 @@ input.onLoudSound(function () {
     light.showRing(
     `yellow yellow yellow yellow yellow yellow yellow yellow yellow yellow`
     )
-    control.waitMicros(100)
+    control.waitMicros(200)
+    makerController.player1.setButton(ArcadeButton.A, false)
     light.showRing(
     `black black black black black black black black black black`
     )
